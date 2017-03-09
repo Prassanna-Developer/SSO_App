@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.io.Serializable;
 
 @Component
-public class AuthenticationEntryPointImpl implements AuthenticationEntryPoint, Serializable {
+public class SSOAuthenticationEntryPointImpl implements AuthenticationEntryPoint, Serializable {
 
     private static final long serialVersionUID = -8970718410437077606L;
 
