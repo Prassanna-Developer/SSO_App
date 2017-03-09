@@ -17,7 +17,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.web.filter.OncePerRequestFilter;
 
-public class AuthenticationTokenFilterImpl extends OncePerRequestFilter {
+public class SSOAuthenticationTokenFilterImpl extends OncePerRequestFilter {
 
     private final Log logger = LogFactory.getLog(this.getClass());
 

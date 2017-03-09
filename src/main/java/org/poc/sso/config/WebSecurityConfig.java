@@ -1,7 +1,7 @@
 package org.poc.sso.config;
 
-import org.poc.sso.security.AuthenticationEntryPointImpl;
-import org.poc.sso.security.AuthenticationTokenFilterImpl;
+import org.poc.sso.security.SSOAuthenticationEntryPointImpl;
+import org.poc.sso.security.SSOAuthenticationTokenFilterImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -24,7 +24,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
-    private AuthenticationEntryPointImpl unauthorizedHandler;
+    private SSOAuthenticationEntryPointImpl unauthorizedHandler;
 
     @Autowired
     private UserDetailsService userDetailsService;
@@ -42,8 +42,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     @Bean
-    public AuthenticationTokenFilterImpl authenticationTokenFilterBean() throws Exception {
-        return new AuthenticationTokenFilterImpl();
+    public SSOAuthenticationTokenFilterImpl authenticationTokenFilterBean() throws Exception {
+        return new SSOAuthenticationTokenFilterImpl();
     }
 
     @Override
